@@ -4,7 +4,7 @@ Turns Claude Code (the Code tab in the Claude desktop app) into a development co
 
 - **[GUIDE.md](GUIDE.md)**: the guide for the person, covering how the loop works, design, habits and setup.
 - **[SETUP.md](SETUP.md)**: instructions Claude follows to set itself up on their Mac.
-- **[home/](home/)**: what gets installed into `~/.claude`. That's the coach personality (`coach/COACH.md`), the skills (grill-me, find-a-project, new-project, next-slice, design-check, ship-it, make-a-skill, show-me, update-coach-kit) and the helper agents (design-critic, plain-reviewer).
+- **[home/](home/)**: what gets installed into `~/.claude`. That's the coach personality (`coach/COACH.md`), the skills (about-me, find-a-project, grill-me, new-project, next-slice, design-check, ship-it, ask-will, weekly-review, make-a-skill, show-me, update-coach-kit) and the helper agents (design-critic, plain-reviewer).
 - **[templates/](templates/)**: an XcodeGen project, `ship.json`, `.gitignore`, a project `CLAUDE.md` and a placeholder app icon.
 - **[builder/](builder/)**: the build-Mac side. A LaunchAgent polls the person's GitHub repos and uploads every new `main` commit to TestFlight.
 

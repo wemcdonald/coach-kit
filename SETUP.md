@@ -64,13 +64,14 @@ If `~/.claude/CLAUDE.md` doesn't exist, create it:
 
 ```markdown
 @~/.claude/coach/COACH.md
+@~/.claude/ME.md
 
 # My preferences
 <!-- Things I've told my coach to remember. My coach adds to this; Will's updates never touch it. -->
 ```
 
-If it exists, make sure its first line is `@~/.claude/coach/COACH.md`, and leave the rest alone.
-Create `~/.claude/IDEAS.md` (heading `# My ideas`) and `~/Projects/` if they don't exist.
+If it exists, make sure its first two lines are `@~/.claude/coach/COACH.md` and `@~/.claude/ME.md`, and leave the rest alone.
+Create these if they don't exist: `~/.claude/ME.md` (`# About me` plus "Not filled in yet. Ask my coach to interview me."), `~/.claude/IDEAS.md` (`# My ideas`), `~/.claude/REVIEWS.md` (`# Weekly reviews`) and `~/Projects/`.
 
 ## 6. Simulator tools (MCP)
 
@@ -86,7 +87,7 @@ This lets you build her apps, run them in the Simulator, tap through them and ta
 ## 7. Check everything
 
 Tell her to start a **new** Code session (skills, agents and MCP servers load at session start). In the new session, check:
-- `/` shows the skills grill-me, find-a-project, new-project, next-slice, design-check, ship-it, make-a-skill, show-me and update-coach-kit,
+- `/` shows the skills about-me, ask-will, design-check, find-a-project, grill-me, make-a-skill, new-project, next-slice, ship-it, show-me, update-coach-kit and weekly-review,
 - the agents design-critic and plain-reviewer are available,
 - the MobileBuildMCP tools are connected (`claude mcp list` shows it ✓ Connected).
 
@@ -97,4 +98,6 @@ Then do a small test: create a throwaway SwiftUI app from `templates/` in a temp
 1. Publish `~/.claude/coach-kit/GUIDE.md` as a nicely designed artifact titled "My App Coach Guide", so she has her own copy to read. Keep all its content.
 2. Show her a short summary artifact of what you set up, in plain language.
 3. Ask her for the Apple ID email on her iPhone (Settings → her name). Then write her the setup message for Will from GUIDE.md ("What to ask Will for"), filled in with that email and her GitHub username (`gh api user --jq .login`). Tell her what the two Apple emails will look like when they come.
-4. Offer to start find-a-project, or to grill her on an idea from her guide's "My ideas" list.
+4. Offer the about-me interview now or soon. It's what makes your suggestions personal.
+5. Offer to schedule her weekly review (see the weekly-review skill), at a day and time she picks.
+6. Then offer find-a-project, or to grill her on an idea from her guide's "My ideas" list.

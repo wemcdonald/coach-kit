@@ -88,12 +88,44 @@ Will improves the coach kit over time. Say **"update my coach kit"** to get his 
 - **Ask "what did you change and why?"** You'll learn a lot from the answers.
 - **When your coach is going in circles** (same fix three times, getting worse), say: *"Stop. Explain the problem in plain English, list three possible causes, and tell me which you think it is."* Or go back to the last version that worked and try another approach.
 - **Nothing is permanent.** Every working version is saved on GitHub. Be brave.
-- **Use your other AI subscriptions on purpose:**
-  - **Perplexity** for research. "What apps already do X, and what do people complain about?"
-  - **Gemini** for a second opinion on your spec ("what's missing or confusing?") and for generating app icons and images.
-  - **Claude** for the building. Keep each project in one place.
+- **Use the right AI for the job.** See "Which AI for what" below.
 - **No secrets in code.** No passwords, keys or personal data. If something needs an account, a key or money, your coach will write you a note for Will.
 - **Start with things only you use.** They can be messy and weird. That's fine.
+
+## Your coach gets to know you
+
+Early on, your coach will offer to **interview you about your life**: your days and weeks, your goals, the people you coordinate with, the tools you use, what you find beautiful, and what you never want automated. Skip anything you like. It saves the answers in a private file on your Mac (`~/.claude/ME.md`) that only your coach reads. This is what turns generic suggestions into "you mentioned you always forget X; want a tiny thing for that?"
+
+You can read or edit that file any time, or say *"update what you know about me."* If you want Gemini or Perplexity to know you too, you can paste it into them. That's your choice.
+
+## The weekly review
+
+Once a week, your coach checks in for about 10 minutes. What did you do by hand? What annoyed you? Which of your apps did you actually use? Then it suggests **one** small next thing, which is sometimes "nothing this week." During setup it offers to schedule this in the Claude app (Code tab → **Routines**). It runs when the Claude app is open and your Mac is awake. If one gets missed, your coach notices and offers it next time. You can also just say *"weekly review."*
+
+This little habit is what turns AI from a tool you remember to use into something that keeps making your life easier.
+
+## Which AI for what
+
+You pay for three AIs. Use each for what it's best at:
+
+| Use | For | Example |
+|---|---|---|
+| **Claude** | Building, writing, planning, thinking things through, anything with your files | "Grill me about this idea." "Help me write a tricky email." |
+| **Perplexity** | Research with sources, current info, products and prices | "What apps already do X, and what do people complain about?" |
+| **Gemini** | Images and app icons, anything in Google apps, a second opinion | "Make a calm, minimal app icon for a plant-watering tracker." |
+| **NotebookLM** (free, from Google) | Learning from your own documents | Drop in a manual or a stack of PDFs and ask questions, or get an audio summary. |
+
+**When it matters, ask two.** For anything important, paste the same question or plan into a second AI and compare. Disagreement is a signal to dig in.
+
+Your coach also knows that not everything needs an app. Sometimes the answer is connecting Claude to your calendar or email (in the Claude app: Settings → Connectors), a scheduled task, an Apple Shortcut, or a setting you didn't know existed.
+
+## Good judgment with AI
+
+- **AI can be confidently wrong.** For health, legal or money questions, use AI to get organized and to know what to ask, then check with a professional or a trusted source. Perplexity shows its sources, so click them.
+- **Ask for pushback.** AIs like to agree. Try: *"What's wrong with this plan? Be blunt."* Your coach is told to be honest with you, and you're allowed to ask for more.
+- **Be careful with other people's information.** Don't paste friends' or family's private details, messages or photos into AI tools without a good reason.
+- **Never paste passwords or codes** into any AI chat, even if it asks.
+- **You're in charge.** Your coach asks before changing things on your Mac. Read what it wants to do, and when unsure, ask "what does this do?" before saying yes.
 
 ## What to ask Will for
 
@@ -111,7 +143,7 @@ Then two emails arrive from Apple:
 
 > New app: **[name]**, bundle ID `com.wemcdonald.mishi.[name]`. Can you create it in App Store Connect? The repo is github.com/[you]/[name].
 
-**When something's stuck.** Your coach tells you when a problem is Will's, and gives you a message to send. That covers build errors about signing, provisioning or App Store Connect; a TestFlight build that never shows up; or a build Mac that seems asleep (no answer after 15 minutes).
+**When something's stuck.** Say *"ask Will."* Your coach writes up the problem with everything Will needs (what you tried, the error, screenshots) as a GitHub issue that notifies him, shows it to you first, and checks for his answer next time. Text him the link if it's urgent. That covers build errors about signing, provisioning or App Store Connect; a TestFlight build that never shows up; or a build Mac that seems asleep (no answer after 15 minutes).
 
 **Before anything bigger.** A web app that needs a server, a database, logins or its own domain name; anything with payments; putting an app on the public App Store. Not because you can't, but because these cost money or are hard to undo, and Will can set them up properly in a few minutes.
 

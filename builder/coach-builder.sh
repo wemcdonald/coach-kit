@@ -154,6 +154,14 @@ repos() {
   done | sort -u
 }
 
+# Accept collaborator invites from the watched owners, so new app repos are visible without Will
+# clicking through each invitation email.
+for owner in $OWNERS; do
+  for inv in $(gh api user/repository_invitations --jq ".[] | select(.inviter.login == \"$owner\") | .id" 2>/dev/null); do
+    gh api -X PATCH "user/repository_invitations/$inv" --silent && log "accepted repo invite $inv from $owner"
+  done
+done
+
 for repo in $(repos); do
   sha="$(gh api "repos/$repo/commits/main" --jq .sha 2>/dev/null)" || continue
   statefile="$STATE/$(echo "$repo" | tr / _).sha"

@@ -29,6 +29,8 @@ gh auth setup-git
 curl -fsSL https://claude.ai/install.sh | bash
 ```
 
+If she doesn't have a GitHub account yet, walk her through "Set up GitHub" in GUIDE.md first (setup step 3). The `gh auth login` line shows a one-time code in Terminal and opens github.com/login/device: she checks the code matches and clicks Authorize.
+
 When she's done, check: `/opt/homebrew/bin/brew --version`, `gh auth status`, `xcodegen --version`, `node --version`, and `~/.local/bin/claude --version` (or `claude --version`). Skip anything that's already installed.
 
 ## 3. Git identity
@@ -94,5 +96,5 @@ Then do a small test: create a throwaway SwiftUI app from `templates/` in a temp
 
 1. Publish `~/.claude/coach-kit/GUIDE.md` as a nicely designed artifact titled "My App Coach Guide", so she has her own copy to read. Keep all its content.
 2. Show her a short summary artifact of what you set up, in plain language.
-3. Write her a message for Will with her GitHub username (`gh api user --jq .login`), so he can turn on automatic TestFlight builds for her repos.
+3. Ask her for the Apple ID email on her iPhone (Settings → her name). Then write her the setup message for Will from GUIDE.md ("What to ask Will for"), filled in with that email and her GitHub username (`gh api user --jq .login`). Tell her what the two Apple emails will look like when they come.
 4. Offer to start find-a-project, or to grill her on an idea from her guide's "My ideas" list.

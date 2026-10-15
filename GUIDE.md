@@ -95,12 +95,25 @@ Will improves the coach kit over time. Say **"update my coach kit"** to get his 
 - **No secrets in code.** No passwords, keys or personal data. If something needs an account, a key or money, your coach will write you a note for Will.
 - **Start with things only you use.** They can be messy and weird. That's fine.
 
-## Things that need Will
+## What to ask Will for
 
-Your coach knows these and will hand you a short message to send him:
-- **Each new iPhone or Mac app needs a one-time setup** in Apple's App Store Connect before TestFlight works. Takes Will a minute.
-- Anything that needs a server, a database, logins, payments or the App Store.
-- Build errors about "signing," "provisioning" or "App Store Connect."
+Your coach knows all of this and writes the messages for you, but here's the full list so nothing surprises you.
+
+**Once, right after setup.** Send Will:
+
+> Hi Will! I'm set up. My GitHub username is `____`, and the Apple ID email on my iPhone is `____`. Can you turn on TestFlight builds for me?
+
+Then two emails arrive from Apple:
+1. **"You've been invited to App Store Connect."** Tap the link and sign in with your Apple ID. Nothing else to do there; it just lets Will send you test builds.
+2. **A TestFlight invitation**, once your first app exists. Open it on your iPhone. It opens the TestFlight app, where you tap **Install**.
+
+**Each new iPhone or Mac app.** Apple makes Will create every app by hand once in App Store Connect. It takes him a minute, but uploads fail until he does. Your coach writes this message when you start the project:
+
+> New app: **[name]**, bundle ID `com.wemcdonald.mishi.[name]`. Can you create it in App Store Connect? The repo is github.com/[you]/[name].
+
+**When something's stuck.** Your coach tells you when a problem is Will's, and gives you a message to send. That covers build errors about signing, provisioning or App Store Connect; a TestFlight build that never shows up; or a build Mac that seems asleep (no answer after 15 minutes).
+
+**Before anything bigger.** A web app that needs a server, a database, logins or its own domain name; anything with payments; putting an app on the public App Store. Not because you can't, but because these cost money or are hard to undo, and Will can set them up properly in a few minutes.
 
 ---
 
@@ -110,16 +123,25 @@ It takes about 2 hours, mostly downloads.
 
 1. **Update macOS:** System Settings → General → Software Update.
 2. **Install Xcode** from the Mac App Store. It's free but huge, so start it first. Open it once, accept the license, and choose **iOS** when it asks about platforms.
-3. **Make a GitHub account** at github.com. Turn on two-factor authentication (Settings → Password and authentication).
-4. **Install GitHub Desktop** (desktop.github.com) and sign in. It shows your saved versions visually.
+3. **Set up GitHub.** GitHub stores every version of your projects online. Think of it as Time Machine for your apps, which Will can also look at. The free plan is all you need, including private projects.
+   1. Go to **github.com/signup**. Use your normal email and a strong password (let your Mac's Passwords app make one and save it).
+   2. **Pick a username** you'd be happy to share, like `mishi-makes`. Will needs it, and it shows in your project links.
+   3. Confirm the code GitHub emails you. If it asks about plans or a survey, choose **Free** and skip the rest.
+   4. **Turn on two-step sign-in:** click your picture (top right) → **Settings** → **Password and authentication** → **Enable two-factor authentication**. The easiest option is a passkey (your Mac or iPhone signs you in with Touch ID or Face ID). When GitHub shows **recovery codes**, save them in the Passwords app or print them. They're how you get back in if you lose your phone.
+   5. **Keep your email private:** Settings → **Emails** → tick **Keep my email addresses private**.
+   6. **Install GitHub Desktop** from desktop.github.com, open it, and choose **Sign in to GitHub.com**. Your browser opens; click **Authorize**. You'll use it to look back through versions of your work. Your coach does the saving itself.
+   7. During setup (step 6 below), your coach also connects GitHub to Terminal. Terminal shows a code like `ABCD-1234` and a browser window opens. Check the codes match, then click **Authorize**.
+
+   Every project you make is **private**: only you and Will can see it. Your coach adds Will to each one automatically.
+4. **Know your Apple ID email.** It's the one at the top of Settings on your iPhone (tap your name). Will needs it for TestFlight.
 5. **Install the Claude desktop app** (claude.ai/download), sign in, and open the **Code** tab. Choose your home folder when it asks for a folder. Leave permissions on the default (Claude asks before making changes).
 6. **Paste this into the Code tab:**
 
    > Set yourself up as my development coach. Clone https://github.com/wemcdonald/coach-kit into ~/.claude/coach-kit and follow its SETUP.md. Explain each step in plain language before you do it.
 
    Claude will ask your permission at several points and will give you one block to paste into Terminal (for things that need your password). If anything confuses you, ask "what does this do?"
-7. **Send Will your GitHub username** (your coach writes the message). He'll switch on automatic TestFlight builds and invite you to TestFlight.
-8. **On your iPhone:** accept Will's email invite and install the free **TestFlight** app from the App Store.
+7. **Send Will the setup message** (see "What to ask Will for" above). Your coach fills it in.
+8. **On your iPhone:** install the free **TestFlight** app from the App Store, and accept Apple's emails when they arrive.
 
 Then say: *"Help me find something to build."*
 

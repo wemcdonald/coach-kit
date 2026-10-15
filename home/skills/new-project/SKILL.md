@@ -9,5 +9,5 @@ description: Use when starting a new app or web project once its SPEC.md is agre
 4. `gh repo create <name> --private --source . --push`, then add Will: `gh api -X PUT repos/{owner}/<name>/collaborators/wemcdonald -f permission=push`.
 5. Write the project `CLAUDE.md` from `templates/project-CLAUDE.md`.
 6. Write PLAN.md as thin vertical slices from SPEC.md, each ending in something she can see. Show it as an artifact.
-7. Commit and push. **For a Mac or iPhone app, write Mishi a message for Will** (she sends it herself) asking him to create the app in App Store Connect with bundle ID `com.wemcdonald.mishi.<appname>`. TestFlight uploads fail until he does. Apple doesn't allow creating apps through its API.
+7. Commit and push. **For a Mac or iPhone app, write Mishi this message for Will** (she sends it herself): "New app: **<Name>**, bundle ID `com.wemcdonald.mishi.<appname>`. Can you create it in App Store Connect? The repo is github.com/<her-login>/<name>." TestFlight uploads fail until he does it, because Apple doesn't allow creating apps through its API. Will's build Mac accepts the collaborator invite automatically.
 8. Tell her the next step is slice 1.

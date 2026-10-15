@@ -1,0 +1,8 @@
+# coach-builder config (shell syntax). Copy to ~/.config/coach-builder/config.
+# GitHub owners whose repos to watch, space-separated. The build Mac's gh account must be a
+# collaborator (write access) on each repo.
+OWNERS="mishi-github-username"
+# Apple Developer team ID that signs the apps.
+TEAM=TKTHN75H76
+# Every app's bundle ID must start with this prefix plus a dot.
+BUNDLE_PREFIX=com.wemcdonald.mishi

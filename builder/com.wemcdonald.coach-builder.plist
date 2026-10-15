@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Runs coach-builder every 5 minutes in the logged-in GUI session, which signing needs
+     (the Xcode account lives in the login keychain). Installed by builder/install.sh. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.wemcdonald.coach-builder</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__SCRIPT__</string>
+  </array>
+  <key>StartInterval</key><integer>300</integer>
+  <key>RunAtLoad</key><true/>
+  <key>LimitLoadToSessionType</key><string>Aqua</string>
+  <key>ProcessType</key><string>Standard</string>
+  <key>StandardOutPath</key><string>__HOME__/Library/Logs/coach-builder.log</string>
+  <key>StandardErrorPath</key><string>__HOME__/Library/Logs/coach-builder.log</string>
+</dict>
+</plist>

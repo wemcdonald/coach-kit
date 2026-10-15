@@ -1,0 +1,39 @@
+# XcodeGen project spec. Replace AppName (folder, target and scheme) and appname (bundle ID,
+# lowercase). No DEVELOPMENT_TEAM here: Will's build Mac supplies it, and Simulator builds need none.
+# Run `xcodegen generate` after adding or removing files. For a Mac app, change
+# platform to macOS and deploymentTarget to macOS: "26.0".
+name: AppName
+options:
+  bundleIdPrefix: com.wemcdonald.mishi
+  deploymentTarget:
+    iOS: "26.0"
+settings:
+  base:
+    CODE_SIGN_STYLE: Automatic
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "6.0"
+targets:
+  AppName:
+    type: application
+    platform: iOS
+    sources: [AppName]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.wemcdonald.mishi.appname
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+schemes:
+  AppName:
+    build:
+      targets:
+        AppName: all
+    run:
+      config: Debug
+    archive:
+      config: Release
